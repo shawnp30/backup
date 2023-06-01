@@ -25,7 +25,7 @@ klipper_folder=~/klipper
 moonraker_folder=~/moonraker
 
 ### Path to your Mainsail folder, by default that is '~/mainsail'
-mainsail_folder=~/mainsail
+#mainsail_folder=~/mainsail
 
 ### Path to your Fluidd folder, by default that is '~/fluidd'
 fluidd_folder=~/fluidd
@@ -35,7 +35,6 @@ fluidd_folder=~/fluidd
 branch=master
 
 #####################################################################
-
 #####################################################################
 
 
