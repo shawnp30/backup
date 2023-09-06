@@ -40,12 +40,31 @@ channel = stable
 repo = mainsail-crew/mainsail
 path = ~/mainsail
 
-[update_manager mainsail-config]
+[update_manager print_area_bed_mesh]
 type = git_repo
-primary_branch = master
-path = ~/mainsail-config
-origin = https://github.com/mainsail-crew/mainsail-config.git
-managed_services = klipper
+path = ~/print_area_bed_mesh
+origin = https://github.com/Turge08/print_area_bed_mesh.git
+is_system_service = False
+
+[power printer]
+type = tplink_smartplug
+address = 192.168.1.248
+restart_klipper_when_powered = True
+restart_delay = 3
+port = 9999
+off_when_shutdown = True
+on_when_job_queued = True
+locked_while_printing = True
+
+[power bed]
+type = tplink_smartplug
+address = 192.168.1.163
+restart_klipper_when_powered = True
+restart_delay = 3
+port = 9999
+off_when_shutdown = True
+on_when_job_queued = True
+locked_while_printing = false
 
 [update_manager crowsnest]
 type = git_repo
@@ -61,4 +80,11 @@ origin = https://github.com/mainsail-crew/sonar.git
 primary_branch = main
 managed_services = sonar
 install_script = tools/install.sh
+
+[update_manager fluidd-config]
+type = git_repo
+primary_branch = master
+path = ~/fluidd-config
+origin = https://github.com/fluidd-core/fluidd-config.git
+managed_services = klipper
 
